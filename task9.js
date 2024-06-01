@@ -7,16 +7,20 @@ const renderer = new THREE.WebGLRenderer();
 const geometryCube = new THREE.BoxGeometry(1, 1, 1);
 const geometrySphere = new THREE.SphereGeometry(1, 1, 1);
 const geometryCone = new THREE.ConeGeometry(1, 1, 3);
-const geometryTorusKnot = new THREE.TorusKnotGeometry(0.4,0.5   ,2);
-const geometryCylinder = new THREE.CylinderGeometry(0.5,0.5,1);
+const geometryTorusKnot = new THREE.TorusKnotGeometry(0.4, 0.4, 3, 3);
+const geometryCylinder = new THREE.CylinderGeometry(1, 1, 1);
 
-const material = new THREE.MeshBasicMaterial({color: getRandomColor()});
+const materialCube = new THREE.MeshBasicMaterial({color: getRandomColor()});
+const materialSphere = new THREE.MeshBasicMaterial({color: getRandomColor()});
+const materialCone = new THREE.MeshBasicMaterial({color: getRandomColor()});
+const materialTorusKnot = new THREE.MeshBasicMaterial({color: getRandomColor()});
+const materialCylinder = new THREE.MeshBasicMaterial({color: getRandomColor()});
 
-const cube = new THREE.Mesh(geometryCube, material);
-const sphere = new THREE.Mesh(geometrySphere, material);
-const cone = new THREE.Mesh(geometryCone, material);
-const torusKnot = new THREE.Mesh(geometryTorusKnot, material);
-const cylinder = new THREE.Mesh(geometryCylinder, material);
+const cube = new THREE.Mesh(geometryCube, materialCube);
+const sphere = new THREE.Mesh(geometrySphere, materialSphere);
+const cone = new THREE.Mesh(geometryCone, materialCone);
+const torusKnot = new THREE.Mesh(geometryTorusKnot, materialTorusKnot);
+const cylinder = new THREE.Mesh(geometryCylinder, materialCylinder);
 
 cube.position.set(1, 2, 0);
 sphere.position.set(-1, -2, 0);
